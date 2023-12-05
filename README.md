@@ -2,14 +2,11 @@
 
 ## Overview
 
-Welcome to the URL Shortener Backend Service! This service is built using Ruby on Rails and PostgreSQL to provide a robust and efficient solution for shortening long URLs. It enables users to create shortened versions of URLs, making them more convenient and easy to share.
+Welcome to the Little URL Backend Service! This service is built using Ruby on Rails and PostgreSQL to provide a robust and efficient solution for shortening long URLs. It enables users to create shortened versions of URLs, making them more convenient and easy to share.
 
 ## Features
 
 - **Shorten URLs:** Easily shorten long URLs to create concise and shareable links.
-- **Custom Short URLs:** Optionally create custom short URLs for a personalized touch.
-- **Analytics:** Track and analyze usage statistics for shortened URLs.
-- **Secure:** Implement URL validation and user authentication for secure URL management.
 
 ## Setup
 
