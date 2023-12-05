@@ -5,21 +5,17 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby 3.2.2 
 
-* System dependencies
+* Rails 7.1.0
 
-* Configuration
+* Postgresql
 
-* Database creation
+* to run use
+''' rake db:create '''
+''' rails db:migrate '''
+''' rails s '''
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # little_url
+
+little url is a url shortener service backend
