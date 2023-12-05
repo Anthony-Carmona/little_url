@@ -1,7 +1,4 @@
 class Site < ApplicationRecord
-    extend FriendlyId
-    
-    friendly_id :little_url, use: :slugged
 
     before_create :create_lit_url
     
