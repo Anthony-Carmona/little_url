@@ -1,21 +1,63 @@
-# README
+# URL Shortener Backend Service
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
 
-Things you may want to cover:
+Welcome to the URL Shortener Backend Service! This service is built using Ruby on Rails and PostgreSQL to provide a robust and efficient solution for shortening long URLs. It enables users to create shortened versions of URLs, making them more convenient and easy to share.
 
-* Ruby 3.2.2 
+## Features
 
-* Rails 7.1.0
+- **Shorten URLs:** Easily shorten long URLs to create concise and shareable links.
+- **Custom Short URLs:** Optionally create custom short URLs for a personalized touch.
+- **Analytics:** Track and analyze usage statistics for shortened URLs.
+- **Secure:** Implement URL validation and user authentication for secure URL management.
 
-* Postgresql
+## Setup
 
-* to run use
-''' rake db:create '''
-''' rails db:migrate '''
-''' rails s '''
+Follow these steps to set up the URL Shortener Backend Service locally:
 
-# little_url
+1. **Clone the Repository:**
+   ```bash
+   git clone git@github.com:Anthony-Carmona/little_url.git
+   cd little_url
+   ```
 
-little url is a url shortener service backend
+2. **Install Dependencies:**
+   ```bash
+   bundle install
+   ```
+
+3. **Database Setup:**
+   ```bash
+   rails db:create
+   rails db:migrate
+   ```
+
+4. **Run the Server:**
+   ```bash
+   rails server
+   ```
+
+5. **Access the Service:**
+the service by default will run on http://localhost:3000
+
+## Usage
+use the API endpoint to shorten a URL:
+
+1. **Shorten a url:**
+use the 
+   ```
+   POST /sites
+   ```
+endpoint
+
+2. **retrieve a long url:**
+use the 
+   ```
+   GET /:long_url
+   ```
+endpoint
+
+
+
+
+
