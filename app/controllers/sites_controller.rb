@@ -15,14 +15,14 @@ class SitesController < ApplicationController
 
   # POST /sites
   def create
-    begin
-      URI.parse(site_params[:long_url])
-    rescue
+    long_url = (Regexp.new('(?:f|ht)tps?://') =~ site_params[:long_url] ? "" : "http://") + site_params[:long_url]
+    
+    unless long_url =~ /\A#{URI::regexp}\z/
       render json: {error: "not a valid url", status: 400}, status: :bad_request
       return
     end
-    
-    @site = Site.new(site_params)
+  
+    @site = Site.find_or_create_by(long_url: long_url)
 
     if @site.save
       render json: @site, status: :created, location: @site
@@ -54,5 +54,12 @@ class SitesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def site_params
       params.require(:site).permit(:long_url, :little_url)
+    end
+
+    def save
+      unless(Regexp.new('(?:f|ht)tps?://') =~ site_params[:long_url])
+        site_params[:long_url] = "http://" + site_params[:long_url]
+        puts({site_params: site_params})
+      end
     end
 end
